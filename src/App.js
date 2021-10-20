@@ -1,10 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
+import Landing from "./pages/landing/Landing";
 function App() {
   return (
     <div className="App">
-      <h1>Hello World!</h1>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Landing} />
+        </Switch>
+      </Router>
     </div>
   );
 }
